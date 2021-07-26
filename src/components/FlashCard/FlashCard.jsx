@@ -31,9 +31,9 @@ function FlashCard({ word }) {
         align="center"
         onClick={handleOnClick}
       >
-        {edit && <EditFlashcardForm />}
+        {edit && <EditFlashcardForm word={word} />}
         {!edit && <FlashCardWords languageToggle={languageToggle} word={word} />}
-        <EditFlashCardButton setEdit={setEdit} />
+        <EditFlashCardButton setEdit={setEdit} id={id} />
       </Box>
     </>
   );

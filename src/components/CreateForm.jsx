@@ -1,9 +1,14 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Box, FormControl, FormLabel, Input } from '@chakra-ui/react';
+import {
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+} from '@chakra-ui/react';
 import { Button } from '@chakra-ui/button';
 import useUpdateForm from './hooks/useUpdateForm';
-import createNewWord from '../utils/index';
+import { createNewWord } from '../utils/index';
 
 function CreateForm() {
   const history = useHistory();
