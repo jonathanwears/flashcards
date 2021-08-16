@@ -6,7 +6,7 @@
 #####  In the database second, all words from the database are fetched and can be edited. New words can be created and added to the database.
 
 ##### The companion API can be found here: [dbapi](https://github.com/jonathanwears/dbapi/ "Timer repo")
-##### The previously mentioned areas can be found in:  <br> [src/components/Flashcard](https://github.com/jonathanwears/flashcards/tree/pre-production/src/components/FlashCard "Flashcard folder") <br> [/src/utils/](https://github.com/jonathanwears/flashcards/tree/pre-production/src/utils "utils folder") <br> [/src/wepack.config.js](src/webpack.config.js)
+##### The previously mentioned areas can be found in:  <br> [src/components/Flashcard](https://github.com/jonathanwears/flashcards/tree/pre-production/src/components/FlashCard "Flashcard folder") <br> [/src/utils/](https://github.com/jonathanwears/flashcards/tree/pre-production/src/utils "utils folder") <br> [/src/webpack.config.js](webpack.config.js)
 
 ## Setup
 To run this project, install it locally using npm:
