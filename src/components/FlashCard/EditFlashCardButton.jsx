@@ -15,6 +15,7 @@ import {
 import { deleteEntry } from '../../utils';
 
 function EditFlashCardButton({ setEdit, id }) {
+  console.log(id);
   function handleEditClick() {
     setEdit(true);
   }
@@ -28,11 +29,7 @@ function EditFlashCardButton({ setEdit, id }) {
   };
 
   function handleDeleteClick() {
-    try {
-      deleteEntry(deleteOptions);
-    } catch (err) {
-      console.log(err);
-    }
+    deleteEntry(deleteOptions);
   }
 
   return (
