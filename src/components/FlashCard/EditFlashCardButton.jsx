@@ -13,23 +13,30 @@ import {
   MenuDivider,
 } from '@chakra-ui/react';
 import { deleteEntry } from '../../utils';
+import { useHistory } from 'react-router-dom';
 
 function EditFlashCardButton({ setEdit, id }) {
-  console.log(id);
+  const history = useHistory();
+
   function handleEditClick() {
     setEdit(true);
   }
 
   const deleteOptions = {
     method: 'DELETE',
-    body: JSON.stringify(id),
     headers: {
       'Content-Type': 'application/json',
     },
   };
 
-  function handleDeleteClick() {
-    deleteEntry(deleteOptions);
+  async function handleDeleteClick() {
+    try {
+      await deleteEntry(deleteOptions, id);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      history.go();
+    }
   }
 
   return (

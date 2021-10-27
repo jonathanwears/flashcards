@@ -13,8 +13,8 @@ function NavBar() {
       <Box w="100%" h="5vh">
         <Flex>
           <StyleLink>
-            <Heading>
-              <Link to="/">Home</Link>
+            <Heading pr="2">
+              <Link to="/game">Game</Link>
             </Heading>
           </StyleLink>
           <StyleLink>

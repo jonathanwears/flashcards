@@ -1,9 +1,10 @@
 import React from 'react';
+import { Button } from "@chakra-ui/react";
 
 function Game() {
   return (
     <>
-      <button type="button">Start</button>
+      <Button type="button">Start</Button>
     </>
 
   );
