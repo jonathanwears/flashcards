@@ -1,17 +1,18 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Box, FormControl, FormLabel, Input } from "@chakra-ui/react";
-import { Button } from '@chakra-ui/button';
+import { Box, FormControl, FormLabel, Input, Button } from '@chakra-ui/react';
 import useUpdateForm from '../hooks/useUpdateForm';
 import { updateWord } from '../../utils/index';
+import EditCreateWordUi from './EditCreateWordUi';
 
+// Creates a component to add a new word to db and edit exsisting word
 function EditFlashcardForm({ word }) {
   const history = useHistory();
-  const { newWord, setNewWord, inputChange } = useUpdateForm(null);
+  const { value, setNewValue, inputChange } = useUpdateForm('word');
 
   useEffect(() => {
-    setNewWord({
+    setNewValue({
       id: word._id,
       germanWord: word.germanWord,
       englishWord: word.englishWord,
@@ -20,7 +21,7 @@ function EditFlashcardForm({ word }) {
 
   const postOptions = {
     method: 'PATCH',
-    body: JSON.stringify(newWord),
+    body: JSON.stringify(value),
     headers: {
       'Content-Type': 'application/json',
     },
@@ -40,15 +41,11 @@ function EditFlashcardForm({ word }) {
 
   return (
     <>
-      <Box w="lg" borderWidth="1px" borderRadius="lg" p="1rem" m="1rem" bg="blue.200">
-        <FormControl>
-          <FormLabel>Banana Word</FormLabel>
-          <Input variant="filled" name="englishWord" {...inputChange} value={newWord.englishWord} />
-          <FormLabel>German Word</FormLabel>
-          <Input variant="filled" name="germanWord" {...inputChange} value={newWord.germanWord} />
-          <Button mt="1rem" type="submit" onClick={handleSubmitForm}>Submit</Button>
-        </FormControl>
-      </Box>
+      <EditCreateWordUi
+        inputChange={inputChange}
+        handleSubmitForm={handleSubmitForm}
+        value={value}
+      />
     </>
   );
 }
