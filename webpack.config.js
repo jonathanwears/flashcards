@@ -11,7 +11,6 @@ module.exports = {
   // webpack 5 comes with devServer which loads in development mode
   devServer: {
     port: 3000,
-    watchContentBase: true,
     historyApiFallback: true
   },
   // Webpack doesnt check for jsx automatically.
