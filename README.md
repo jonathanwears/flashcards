@@ -1,6 +1,7 @@
 # A language flashcard Website created with React
 
 ## Project Description
+<<<<<<< HEAD
 ##### This is a ground up React project using webpack and babel.  
 ##### Using a self created API which can be found here : [dbapi](https://github.com/jonathanwears/dbapi "Timer repo"), fetches English and German Words from a mongo database. Users can then flip between the English and German word.  
 #####  In the database second, all words from the database are fetched and can be edited. New words can be created and added to the database.
@@ -9,6 +10,21 @@
 ##### The previously mentioned areas can be found in:  <br> [src/components/Flashcard](https://github.com/jonathanwears/flashcards/tree/pre-production/src/components/FlashCard "Flashcard folder") <br> [/src/utils/](https://github.com/jonathanwears/flashcards/tree/pre-production/src/utils "utils folder") <br> [/src/webpack.config.js](webpack.config.js)
 
 ## Setup
+=======
+
+##### This is a ground up React project using webpack and babel.
+
+##### Using a self created API which can be found here : [dbapi](https://github.com/jonathanwears/dbapi "Timer repo"), fetches English and German Words from a mongo database. Users can then flip between the English and German word.
+
+##### In the database second, all words from the database are fetched and can be edited. New words can be created and added to the database.
+
+##### The companion API can be found here: [dbapi](https://github.com/jonathanwears/dbapi/ "Timer repo")
+
+##### The previously mentioned areas can be found in: <br> [src/components/Flashcard](https://github.com/jonathanwears/flashcards/tree/main/src/components/FlashCard "Flashcard folder") <br> [/src/utils/](https://github.com/jonathanwears/flashcards/tree/main/src/utils "utils folder") <br> [/src/webpack.config.js](webpack.config.js)
+
+## Setup
+
+>>>>>>> dev
 To run this project, install it locally using npm:
 
 ```
@@ -16,6 +32,7 @@ $ cd ../flashcards
 $ npm install
 $ npm start
 ```
+<<<<<<< HEAD
 ## Technology used
 ##### React, Webpack, Babel, ReactRouter, eslint, ChakraUi
 ## Notes
@@ -24,3 +41,18 @@ $ npm start
 fix CORS issue <br>
 add game functionality <br>
 continue styling
+=======
+
+## Technology used
+
+##### React, Webpack, Babel, ReactRouter, eslint, ChakraUi
+
+## Notes
+
+##### The project is not finished. <br>
+
+### Todo <br>
+
+add game functionality <br>
+continue styling
+>>>>>>> dev

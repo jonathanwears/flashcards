@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+<<<<<<< HEAD
 import { ChakraProvider } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
 import Database from './components/Database';
@@ -9,6 +10,19 @@ import Game from './components/Game';
 function App() {
   return (
     <>
+=======
+import { ChakraProvider, Flex } from '@chakra-ui/react';
+import NavBar from './components/NavBar';
+import Database from './pages/Database';
+import Game from './pages/Game';
+
+function App() {
+  return (
+    <Flex
+      direction="column"
+      width="100%"
+    >
+>>>>>>> dev
       <Router>
         <ChakraProvider>
           <NavBar />
@@ -18,7 +32,11 @@ function App() {
           </Switch>
         </ChakraProvider>
       </Router>
+<<<<<<< HEAD
     </>
+=======
+    </Flex>
+>>>>>>> dev
   );
 }
 

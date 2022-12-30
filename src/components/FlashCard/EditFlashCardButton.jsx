@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable react/prop-types */
+>>>>>>> dev
 import React from 'react';
 import { EditIcon } from '@chakra-ui/icons';
 import {
@@ -6,8 +10,13 @@ import {
   MenuList,
   MenuItem,
 } from '@chakra-ui/react';
+<<<<<<< HEAD
 import { deleteEntry } from '../../utils';
 import { useHistory } from 'react-router-dom';
+=======
+import { useHistory } from 'react-router-dom';
+import { deleteEntry } from '../../utils/server';
+>>>>>>> dev
 
 function EditFlashCardButton({ setEdit, id }) {
   const history = useHistory();
