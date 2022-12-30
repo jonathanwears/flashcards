@@ -6,11 +6,7 @@ import EditFlashCardButton from './EditFlashCardButton';
 import EditFlashcardForm from './EditFlashcardForm';
 import FlashCardWords from './FlashCardWords';
 
-<<<<<<< HEAD
-function FlashCard({ word }) {
-=======
 function FlashCard({ word, isGame }) {
->>>>>>> dev
   const [languageToggle, setLanguageToggle] = useState(false);
   const [edit, setEdit] = useState(false);
 
@@ -34,22 +30,12 @@ function FlashCard({ word, isGame }) {
         w="100%"
         borderWidth="1px"
         borderRadius="lg"
-<<<<<<< HEAD
-        align="center"
-        onClick={handleOnClick}
-
-      >
-        {edit && <EditFlashcardForm word={word} />}
-        {!edit && <FlashCardWords languageToggle={languageToggle} word={word} />}
-        <EditFlashCardButton setEdit={setEdit} id={id} />
-=======
         onClick={handleOnClick}
 
       >
         {edit && <EditFlashcardForm word={word} postMethod="PATCH" />}
         {!edit && <FlashCardWords languageToggle={languageToggle} word={word} />}
         {!isGame && <EditFlashCardButton setEdit={setEdit} id={id} />}
->>>>>>> dev
       </Box>
     </div>
   );

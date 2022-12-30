@@ -6,10 +6,6 @@ import './App.css';
 
 ReactDom.render(
   <StrictMode>
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
     <App />
   </StrictMode>,
   document.getElementById('app'),

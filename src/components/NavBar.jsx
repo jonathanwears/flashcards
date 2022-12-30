@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-<<<<<<< HEAD
-  Box,
-=======
->>>>>>> dev
   Link as StyleLink,
   Heading,
   Flex,
@@ -13,11 +9,7 @@ import {
 function NavBar() {
   return (
     <>
-<<<<<<< HEAD
-      <Box w="100%" h="5vh">
-=======
       <Flex w="100%" h="5vh" justifyContent="center">
->>>>>>> dev
         <Flex>
           <StyleLink>
             <Heading pr="2">
@@ -30,11 +22,7 @@ function NavBar() {
             </Heading>
           </StyleLink>
         </Flex>
-<<<<<<< HEAD
-      </Box>
-=======
       </Flex>
->>>>>>> dev
     </>
   );
 }
