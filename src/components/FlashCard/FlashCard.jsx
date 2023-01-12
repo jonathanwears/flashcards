@@ -8,16 +8,19 @@ import FlashCardWords from './FlashCardWords';
 
 function FlashCard({ word, isGame }) {
   const [languageToggle, setLanguageToggle] = useState(false);
-  const [edit, setEdit] = useState(false);
-
+  const [showEditButton, setShowEditButton] = useState(false);
+  const { _id: id } = word;
   const boxColor = languageToggle ? 'teal.300' : 'red.400';
   const boxColorHover = languageToggle ? 'teal.100' : 'red.200';
-  const { _id: id } = word;
   // have a ref to disable edit button
 
   function handleOnClick() {
-    setLanguageToggle(!languageToggle);
+    if (showEditButton === false) {
+      setLanguageToggle(!languageToggle);
+    }
   }
+
+  const newWordForm = showEditButton ? <EditFlashcardForm word={word} postMethod="PATCH" /> : null;
 
   return (
     <div>
@@ -31,11 +34,10 @@ function FlashCard({ word, isGame }) {
         borderWidth="1px"
         borderRadius="lg"
         onClick={handleOnClick}
-
       >
-        {edit && <EditFlashcardForm word={word} postMethod="PATCH" />}
-        {!edit && <FlashCardWords languageToggle={languageToggle} word={word} />}
-        {!isGame && <EditFlashCardButton setEdit={setEdit} id={id} />}
+        <FlashCardWords languageToggle={languageToggle} word={word} />
+        {newWordForm}
+        {!isGame && <EditFlashCardButton setShowEditButton={setShowEditButton} id={id} />}
       </Box>
     </div>
   );

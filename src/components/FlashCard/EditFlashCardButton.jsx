@@ -10,11 +10,11 @@ import {
 import { useHistory } from 'react-router-dom';
 import { deleteEntry } from '../../utils/server';
 
-function EditFlashCardButton({ setEdit, id }) {
+function EditFlashCardButton({ setShowEditButton, id }) {
   const history = useHistory();
 
   function handleEditClick() {
-    setEdit(true);
+    setShowEditButton(true);
   }
 
   const deleteOptions = {
