@@ -10,7 +10,7 @@ import {
 import { useHistory } from 'react-router-dom';
 import { deleteEntry } from '../../utils/server';
 
-function EditFlashCardButton({ setShowEditButton, id }) {
+function EditFlashCardDropdown({ setShowEditButton, id }) {
   const history = useHistory();
 
   function handleEditClick() {
@@ -47,4 +47,4 @@ function EditFlashCardButton({ setShowEditButton, id }) {
   );
 }
 
-export default EditFlashCardButton;
+export default EditFlashCardDropdown;
