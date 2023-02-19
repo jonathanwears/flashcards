@@ -1,26 +1,28 @@
+/* eslint-disable max-len */
 /* eslint-disable no-return-assign */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
 import React, { useState } from 'react';
-import EditFlashCardButton from './EditFlashCardButton';
+import EditFlashCardDropdown from './EditFlashCardDropdown';
 import EditFlashcardForm from './EditFlashcardForm';
-import FlashCardWords from './FlashCardWords';
+import FlashCardWord from './FlashCardWord';
 import Tile from '../Tile';
 
 function FlashCard({ word, isGame }) {
   const [languageToggle, setLanguageToggle] = useState(false);
-  const [showEditButton, setShowEditButton] = useState(false);
+  const [showEditForm, setShowEditForm] = useState(false);
   const { _id: id } = word;
   const boxColor = languageToggle ? 'teal.300' : 'red.400';
   // have a ref to disable edit button
 
   function handleOnClick() {
-    if (showEditButton === false) {
+    if (showEditForm === false) {
       setLanguageToggle(!languageToggle);
     }
   }
-  const newWordForm = showEditButton ? <EditFlashcardForm word={word} postMethod="PATCH" /> : null;
-  const shownWord = languageToggle ? word.englishWord : word.germanWord
+  const newWordForm = showEditForm ? <EditFlashcardForm word={word} postMethod="PATCH" /> : null;
+  const editWordDropdown = isGame ? null : <EditFlashCardDropdown setShowEditBForm={setShowEditForm} id={id} />;
+  const shownWord = languageToggle ? word.englishWord : word.germanWord;
 
   return (
     <Tile
@@ -29,11 +31,12 @@ function FlashCard({ word, isGame }) {
       click={handleOnClick}
     >
       {newWordForm}
-      {!isGame && <EditFlashCardButton setShowEditButton={setShowEditButton} id={id} />}
-      <FlashCardWords
+      {editWordDropdown}
+      <FlashCardWord
         word={shownWord}
       />
     </Tile>
+
   );
 }
 
