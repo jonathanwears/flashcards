@@ -2,7 +2,7 @@
 import React from 'react';
 import { Center, Heading } from '@chakra-ui/react';
 
-function FlashCardWords({ word }) {
+function FlashCardWord({ word }) {
   return (
     <Center>
       <Heading color="white" size="2xl" py="8rem">
@@ -12,4 +12,4 @@ function FlashCardWords({ word }) {
   );
 }
 
-export default FlashCardWords;
+export default FlashCardWord;
