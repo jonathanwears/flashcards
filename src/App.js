@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ChakraProvider, Flex } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
