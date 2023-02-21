@@ -1,14 +1,10 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
-import { Center, Heading } from '@chakra-ui/react';
 
 function FlashCardWord({ word }) {
   return (
-    <Center>
-      <Heading color="white" size="2xl" py="8rem">
-        {word}
-      </Heading>
-    </Center>
+    <h1 className=" text-white text-6xl p-2">
+      {word}
+    </h1>
   );
 }
 
