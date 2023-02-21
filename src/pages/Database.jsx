@@ -22,16 +22,9 @@ function Database() {
   return (
     <>
       <AddNewWordButton />
-      <Box w="100vw">
-        <Grid
-          px="5px"
-          w="100%"
-          templateColumns="repeat(auto-fit, minmax(250px, 1fr))"
-          gap={2}
-        >
-          {renderWords}
-        </Grid>
-      </Box>
+      <div className="flex">
+        {renderWords}
+      </div>
     </>
   );
 }
