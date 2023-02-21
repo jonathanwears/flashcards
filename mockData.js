@@ -9,7 +9,7 @@ export default [
   },
   {
     germanWord: 'Auto',
-    englishWord: 'car',
+    englishWord: 'Car',
   },
   {
     germanWord: 'Haus',
