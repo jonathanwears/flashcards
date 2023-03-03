@@ -1,24 +1,16 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
-import useUpdateForm from '../../utils/hooks/useUpdateForm';
+import useDataStore from '../../utils/useDataStore';
 import { updateWord } from '../../utils/server/index';
-import EditCreateWordUi from './EditCreateWordUi';
+import WordForm from './WordForm';
 
 // Creates a component to add a new word to db and edit existing word
-function EditFlashcardForm({ word, postMethod }) {
+function EditFlashcardForm({ word, postMethod, index }) {
+  const setNewWord = useDataStore((state) => state.replaceWord);
+  const findWord = useDataStore((state) => state.words[index]);
   const history = useHistory();
-  const { value, setNewValue, inputChange } = useUpdateForm('word');
-
-  useEffect(() => {
-    if (word !== undefined) {
-      setNewValue({
-        id: word._id,
-        germanWord: word.germanWord,
-        englishWord: word.englishWord,
-      });
-    }
-  }, []);
+  const [value, setNewValue] = useState();
 
   const postOptions = {
     method: postMethod,
@@ -28,23 +20,23 @@ function EditFlashcardForm({ word, postMethod }) {
     },
   };
 
-  async function handleSubmitForm(event) {
-    event.preventDefault();
+  async function handleSubmitForm(words) {
     try {
-      await updateWord(postOptions);
+      console.log(words);
+      setNewWord(index, words);
+      // await updateWord(postOptions);
     } catch (err) {
       console.log(err);
     } finally {
-      history.go();
+      // history.go();
     }
   }
 
   return (
     <>
-      <EditCreateWordUi
-        inputChange={inputChange}
-        handleSubmitForm={handleSubmitForm}
-        value={value}
+      <WordForm
+        values={word}
+        handleSubmit={handleSubmitForm}
       />
     </>
   );
