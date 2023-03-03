@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import mockData from '../../mockData';
 
-const useDataStore = create((set) => ({
+const dataStore = create((set) => ({
   words: [
     ...mockData,
   ],
@@ -9,9 +9,20 @@ const useDataStore = create((set) => ({
   setWord: (newWord) => set(({ words }) => ({
     words: [
       ...words,
-      { newWord },
+      { ...newWord },
     ],
   })),
+
+  replaceWord: (index, word) => set(({ words }) => (
+    {
+      words: [
+        ...words,
+        {
+          germanWord: word.germanWord,
+          englishWord: word.englishWord,
+        },
+      ],
+    })),
 }));
 
-export default useDataStore;
+export default dataStore;
