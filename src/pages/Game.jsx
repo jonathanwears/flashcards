@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Flex } from '@chakra-ui/react';
 import { getAllWords } from '../utils/server/index';
 import Score from '../components/game/Score';
 import GameUI from '../components/game/GameUI';
@@ -28,7 +27,7 @@ function Game() {
 
   return (
     <>
-      {!gameStart && flashcards && <Button onClick={startGame}>Start</Button>}
+      {/* {!gameStart && flashcards && <Button onClick={startGame}>Start</Button>}
       {
         gameStart
         && (
@@ -44,7 +43,7 @@ function Game() {
           </Flex>
         )
 
-      }
+      } */}
 
     </>
   );

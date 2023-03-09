@@ -1,6 +1,5 @@
 /* eslint-disable object-shorthand */
 import React, { useEffect, useState } from 'react';
-import { Flex, Heading, Text, Box } from '@chakra-ui/react';
 
 function Score() {
   const [score, setScore] = useState({
@@ -28,25 +27,26 @@ function Score() {
   }, [correct, wrong]);
 
   return (
-    <Flex
-      direction="row"
-      alignItems="center"
-    >
-      <Box p="5%">
-        <Heading>Correct</Heading>
-        <Text>{correct}</Text>
-        <button type="button" name="correct" onClick={newScore}>Plus One!</button>
-      </Box>
-      <Box p="5%">
-        <Heading>Wrong</Heading>
-        <Text>{wrong}</Text>
-        <button type="button" name="wrong" onClick={newScore}>Plus One!</button>
-      </Box>
-      <Box p="5%" h="100%">
-        <Heading>Total</Heading>
-        <Text>{total}</Text>
-      </Box>
-    </Flex>
+    null
+    // <Flex
+    //   direction="row"
+    //   alignItems="center"
+    // >
+    //   <Box p="5%">
+    //     <Heading>Correct</Heading>
+    //     <Text>{correct}</Text>
+    //     <button type="button" name="correct" onClick={newScore}>Plus One!</button>
+    //   </Box>
+    //   <Box p="5%">
+    //     <Heading>Wrong</Heading>
+    //     <Text>{wrong}</Text>
+    //     <button type="button" name="wrong" onClick={newScore}>Plus One!</button>
+    //   </Box>
+    //   <Box p="5%" h="100%">
+    //     <Heading>Total</Heading>
+    //     <Text>{total}</Text>
+    //   </Box>
+    // </Flex>
   );
 }
 export default Score;
