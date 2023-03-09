@@ -1,19 +1,24 @@
 # Flashcards
 
-###### Simple Flashcards for German and English created with React, Webpack and Babel
+Simple Flashcards for German and English created with React, Webpack and Babel
 
 ## Table of contents
 
 - [General Info](#general-info)
 - [Technologies Used](#technologies-used)
-- [Setup](#setup)
 - [Features](#features)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [To do](#to-do)
+- [Contact](#contact)
 
 ## General Info
 
 This project was created to allow me to primarily learn how to build and set up a React project using Webpack and Babel.
 
-This project was also created to be the ‘front end’ to an API that I created which can be found here (https://github.com/jonathanwears/dbapi/ "Database API")
+This project was also created to be the ‘front end’ to an API that I created which can be found here: [dbAPI](https://github.com/jonathanwears/dbapi/ "Database API")
 
 Currently the project uses mock data to function
 
@@ -33,7 +38,7 @@ Project is created with:
 - Aid language learning with flashcards
 - ‘Flip’ cards to see the German or English word
 
-##### Screenshots
+## Screenshots
 
 ![Flashcards](./readme/flashcards-example.png)
 
