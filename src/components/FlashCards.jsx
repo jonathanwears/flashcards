@@ -15,7 +15,6 @@ function FlashCards(data) {
 
   return (
     <>
-      <p>hello</p>
       <FlashCard word={singlePassedWord} />
       <button type="button" onClick={handleNextCardClick}>Next</button>
     </>
