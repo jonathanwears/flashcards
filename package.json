@@ -12,13 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.8",
-    "@chakra-ui/react": "^1.8.8",
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
     "core-js": "^3.24.1",
     "eslint-plugin-jest": "^24.7.0",
-    "framer-motion": "^4.1.17",
     "jest": "^27.5.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
