@@ -1,30 +1,52 @@
-# A language flashcard Website created with React
+# Flashcards
 
-## Project Description
-<<<<<<< HEAD
-##### This is a ground up React project using webpack and babel.  
-##### Using a self created API which can be found here : [dbapi](https://github.com/jonathanwears/dbapi "Timer repo"), fetches English and German Words from a mongo database. Users can then flip between the English and German word.  
-#####  In the database second, all words from the database are fetched and can be edited. New words can be created and added to the database.
+Simple Flashcards for German and English created with React, Webpack and Babel
 
-##### The companion API can be found here: [dbapi](https://github.com/jonathanwears/dbapi/ "Timer repo")
-##### The previously mentioned areas can be found in:  <br> [src/components/Flashcard](https://github.com/jonathanwears/flashcards/tree/pre-production/src/components/FlashCard "Flashcard folder") <br> [/src/utils/](https://github.com/jonathanwears/flashcards/tree/pre-production/src/utils "utils folder") <br> [/src/webpack.config.js](webpack.config.js)
+## Table of contents
+
+- [General Info](#general-info)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [To do](#to-do)
+- [Contact](#contact)
+
+## General Info
+
+This project was created to allow me to primarily learn how to build and set up a React project using Webpack and Babel.
+
+This project was also created to be the ‘front end’ to an API that I created which can be found here: [dbAPI](https://github.com/jonathanwears/dbapi/ "Database API")
+
+Currently the project uses mock data to function
+
+## Technologies Used
+
+Project is created with:
+
+- React 17.0
+- Webpack 5.75
+- Babel 7.0
+- Tailwind 4
+- Zustand 4.3
+- React Router 5.3
+
+## Features
+
+- Aid language learning with flashcards
+- ‘Flip’ cards to see the German or English word
+
+## Screenshots
+
+![Flashcards](./readme/flashcards-example.png)
 
 ## Setup
-=======
 
-##### This is a ground up React project using webpack and babel.
+main channel has 'working' version
+dev channel has more up to date code and features. However code may be incomplete, or not run at all.
 
-##### Using a self created API which can be found here : [dbapi](https://github.com/jonathanwears/dbapi "Timer repo"), fetches English and German Words from a mongo database. Users can then flip between the English and German word.
-
-##### In the database second, all words from the database are fetched and can be edited. New words can be created and added to the database.
-
-##### The companion API can be found here: [dbapi](https://github.com/jonathanwears/dbapi/ "Timer repo")
-
-##### The previously mentioned areas can be found in: <br> [src/components/Flashcard](https://github.com/jonathanwears/flashcards/tree/main/src/components/FlashCard "Flashcard folder") <br> [/src/utils/](https://github.com/jonathanwears/flashcards/tree/main/src/utils "utils folder") <br> [/src/webpack.config.js](webpack.config.js)
-
-## Setup
-
->>>>>>> dev
 To run this project, install it locally using npm:
 
 ```
@@ -32,27 +54,22 @@ $ cd ../flashcards
 $ npm install
 $ npm start
 ```
-<<<<<<< HEAD
-## Technology used
-##### React, Webpack, Babel, ReactRouter, eslint, ChakraUi
-## Notes
-##### The project is not finished. <br>  
-### Todo <br>
-fix CORS issue <br>
-add game functionality <br>
-continue styling
-=======
 
-## Technology used
+## Project Status
 
-##### React, Webpack, Babel, ReactRouter, eslint, ChakraUi
+Project is: _in progress_
 
-## Notes
+## Room for Improvement
 
-##### The project is not finished. <br>
+- Organisation of project tree
+- More consistency with modular component design
 
-### Todo <br>
+#### To Do:
 
-add game functionality <br>
-continue styling
->>>>>>> dev
+- Create a game functionality
+- Continue styling
+- Add animations
+
+## Contact
+
+Created by me - feel free to contact me!
