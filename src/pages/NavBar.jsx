@@ -1,9 +1,9 @@
 import React from 'react';
-import NavLink from '../components/FlashCard/navBar/NavLink';
+import NavLink from '../components/navBar/NavLink';
 
 function NavBar() {
   return (
-    <div className="flex flex-row justify-center items-center w-full p-3 ">
+    <div className="flex flex-row justify-center items-center w-full p-3 bg-slate-700 ">
       <NavLink
         link="Game"
       />
