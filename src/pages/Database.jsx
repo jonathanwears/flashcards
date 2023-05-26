@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import FlashCard from '../components/FlashCard/FlashCard';
 import { getAllWords } from '../utils/server';
 import useDataStore from '../utils/useDataStore';
 import AddNewWord from '../components/FlashCard/AddNewWord';
+import FlashCards from '../components/FlashCard/Flashcards';
 
 function Database() {
   const dataStore = useDataStore((state) => state.words);
@@ -17,15 +17,13 @@ function Database() {
     getData();
   }, [dataStore]);
 
-  const renderWords = words ? words.map((word, index) => <FlashCard key={`${word}${index}`} index={index} word={word} />) : null
+  const renderWords = words ? <FlashCards words={words} /> : null;
 
   return (
-    <>
+    <div>
       <AddNewWord />
-      <div className="flex">
-        {renderWords}
-      </div>
-    </>
+      {renderWords}
+    </div>
   );
 }
 
