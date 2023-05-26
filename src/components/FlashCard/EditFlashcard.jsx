@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useDetectClickOutside } from 'react-detect-click-outside';
 import GearIcon from '../../icons/GearIcon';
 import EditFlashcardDropdown from './EditFlashcardDropdown';
+import EditFlashcardForm from './EditFlashcardForm';
 
-function EditFlashcard({ edit, setEdit }) {
+function EditFlashcard({ word, index }) {
   const [toggleOpen, setToggleOpen] = useState(false);
+  const [edit, setEdit] = useState(false);
 
   const dropdown = toggleOpen ? (
     <EditFlashcardDropdown
@@ -12,6 +13,13 @@ function EditFlashcard({ edit, setEdit }) {
       toggleOpen={toggleOpen}
       edit={edit}
       setEdit={setEdit}
+    />
+  ) : null;
+
+  const editForm = edit ? (
+    <EditFlashcardForm
+      word={word}
+      index={index}
     />
   ) : null;
 
@@ -25,6 +33,7 @@ function EditFlashcard({ edit, setEdit }) {
       <div>
         {dropdown}
       </div>
+      {editForm}
     </>
   );
 }
