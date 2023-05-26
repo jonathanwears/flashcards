@@ -1,5 +1,5 @@
-import React from 'react';
-import Flashcard from '../FlashCard/FlashCard';
+// import React from 'react';
+// import Flashcard from '../FlashCard/FlashCard';
 
 function GameUI({ randomise, card }) {
   return (
