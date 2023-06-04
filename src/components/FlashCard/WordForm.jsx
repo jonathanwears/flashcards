@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+
 import FormInput from './FormInput';
 import Button from '../Button';
 
@@ -23,7 +24,7 @@ function WordForm({ values = defaultValues, handleSubmit }) {
   }
 
   return (
-    <div className="bg-blue-50 p-2 w-96 rounded-lg absolute">
+    <div className="bg-blue-50 p-2 w-96 rounded-lg absolute z-10">
       <form className="w-full flex flex-col justify-center items-center p-2">
         <FormInput
           word="english"

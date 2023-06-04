@@ -1,26 +1,30 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
+import { useDropdown } from '../hooks/useDropdown';
 import useDataStore from '../../utils/useDataStore';
 import Button from '../Button';
 import WordForm from './WordForm';
 
 function AddNewWord() {
   const { setWord } = useDataStore((state) => state);
-  const [isOpen, setIsOpen] = useState(false);
+  const [ref, toggle, setToggle] = useDropdown();
 
   const handleSubmit = useCallback((event) => {
     setWord(event);
   });
 
-  const showElement = isOpen ? (
+  const showElement = toggle ? (
     <WordForm
       handleSubmit={handleSubmit}
     />
   ) : null;
 
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      ref={ref}
+    >
       <Button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setToggle(!toggle)}
       >
         Add New Word
       </Button>

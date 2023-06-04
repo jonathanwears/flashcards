@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import GearIcon from '../../icons/GearIcon';
 import EditFlashcardDropdown from './EditFlashcardDropdown';
 import EditFlashcardForm from './EditFlashcardForm';
+import { useDropdown } from '../hooks/useDropdown';
 
 function EditFlashcard({ word, index }) {
-  const [toggleOpen, setToggleOpen] = useState(false);
   const [edit, setEdit] = useState(false);
+  const [ref, isToggled, setIsToggled] = useDropdown();
 
-  const dropdown = toggleOpen ? (
+  const dropdown = isToggled ? (
     <EditFlashcardDropdown
-      setToggleOpen={setToggleOpen}
-      toggleOpen={toggleOpen}
+      setToggleOpen={setIsToggled}
+      toggleOpen={isToggled}
       edit={edit}
       setEdit={setEdit}
     />
@@ -24,9 +25,9 @@ function EditFlashcard({ word, index }) {
   ) : null;
 
   return (
-    <>
+    <div ref={ref}>
       <div
-        onClick={() => setToggleOpen(!toggleOpen)}
+        onClick={(event) => { event.stopPropagation(); setIsToggled(!isToggled); }}
       >
         <GearIcon />
       </div>
@@ -34,7 +35,7 @@ function EditFlashcard({ word, index }) {
         {dropdown}
       </div>
       {editForm}
-    </>
+    </div>
   );
 }
 
