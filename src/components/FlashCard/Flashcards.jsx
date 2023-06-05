@@ -1,9 +1,9 @@
 import React from 'react';
-import Tile from '../Tile';
+import Card from './Card';
 
 function FlashCards({ words }) {
   const flashCards = words.map((word, index) => (
-    <Tile key={`${word}${index}`} index={index} word={word} />));
+    <Card key={`${word}${index}`} index={index} word={word} />));
 
   return (
     <div className="flex">
