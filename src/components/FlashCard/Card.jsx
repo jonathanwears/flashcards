@@ -6,6 +6,8 @@ import EditFlashcard from './EditFlashcard';
 function Card({ word, index }) {
   const [languageToggle, setLanguageToggle] = useState(false);
 
+  const shownWord = languageToggle ? word.englishWord : word.germanWord;
+
   const className = classNames('flex flex-col select-none justify-center items-center rounded-3xl h-96 w-72 m-2 shadow-xl hover:opacity-90', {
     'bg-blue-300': languageToggle,
     'bg-red-500': !languageToggle,
@@ -14,8 +16,6 @@ function Card({ word, index }) {
   function handleOnClick() {
     setLanguageToggle(!languageToggle);
   }
-
-  const shownWord = languageToggle ? word.englishWord : word.germanWord;
 
   return (
     <div className="relative">
