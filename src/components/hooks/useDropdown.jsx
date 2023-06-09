@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { useState, useRef } from 'react';
 import { useOutsideClick } from 'rooks';
 
