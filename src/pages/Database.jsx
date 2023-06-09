@@ -1,38 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid } from '@chakra-ui/react';
-import FlashCard from '../components/FlashCard/FlashCard';
 import { getAllWords } from '../utils/server';
-import AddNewWordButton from '../components/AddNewWordButton';
-import mockData from '../../mockData';
+import useDataStore from '../utils/useDataStore';
+import AddNewWord from '../components/FlashCard/AddNewWord';
+import FlashCards from '../components/FlashCard/Flashcards';
 
 function Database() {
+  const dataStore = useDataStore((state) => state.words);
   const [words, setWords] = useState();
 
   useEffect(() => {
     async function getData() {
       // const data = await getAllWords();
       // const data = mockData;
-      setWords(mockData);
+      setWords(dataStore);
     }
     getData();
-  }, []);
+  }, [dataStore]);
 
-  const renderWords = words ? words.map((word, index) => <FlashCard key={`${word}${index}`} word={word} />) : null
+  const renderWords = words ? <FlashCards words={words} /> : null;
 
   return (
-    <>
-      <AddNewWordButton />
-      <Box w="100vw">
-        <Grid
-          px="5px"
-          w="100%"
-          templateColumns="repeat(auto-fit, minmax(250px, 1fr))"
-          gap={2}
-        >
-          {renderWords}
-        </Grid>
-      </Box>
-    </>
+    <div className="flex flex-col">
+      <AddNewWord />
+      <div className="flex justify-center">
+        {renderWords}
+      </div>
+    </div>
   );
 }
 

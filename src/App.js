@@ -1,27 +1,25 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ChakraProvider, Flex } from '@chakra-ui/react';
-import NavBar from './components/NavBar';
+
+import NavBar from './pages/NavBar';
 import Database from './pages/Database';
 import Game from './pages/Game';
 
 function App() {
   return (
-    <Flex
-      direction="column"
-      width="100%"
-    >
-      <Router>
-        <ChakraProvider>
+    <>
+      <div className="bg-slate-800 w-screen h-screen">
+        <Router>
           <NavBar />
           <Switch>
             <Route exact path="/database" component={Database} />
             <Route exact path="/game" component={Game} />
           </Switch>
-        </ChakraProvider>
-      </Router>
-    </Flex>
+        </Router>
+      </div>
+    </>
   );
 }
 
