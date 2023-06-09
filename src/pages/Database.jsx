@@ -20,9 +20,11 @@ function Database() {
   const renderWords = words ? <FlashCards words={words} /> : null;
 
   return (
-    <div>
+    <div className="flex flex-col">
       <AddNewWord />
-      {renderWords}
+      <div className="flex justify-center">
+        {renderWords}
+      </div>
     </div>
   );
 }
