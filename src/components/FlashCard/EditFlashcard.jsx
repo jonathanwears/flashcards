@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GearIcon from '../../icons/GearIcon';
 import EditFlashcardDropdown from './EditFlashcardDropdown';
 import EditFlashcardForm from './EditFlashcardForm';
 import { useDropdown } from '../hooks/useDropdown';
 
 function EditFlashcard({ word, index }) {
-  const [edit, setEdit] = useState(false);
   const [ref, isToggled, setIsToggled] = useDropdown();
+  const [ref1, toggle, setToggle] = useDropdown();
 
   const dropdown = isToggled ? (
     <EditFlashcardDropdown
       setToggleOpen={setIsToggled}
       toggleOpen={isToggled}
-      edit={edit}
-      setEdit={setEdit}
+      edit={toggle}
+      setEdit={setToggle}
     />
   ) : null;
 
-  const editForm = edit ? (
+  const editForm = a ? (
     <EditFlashcardForm
       word={word}
       index={index}
@@ -25,16 +25,20 @@ function EditFlashcard({ word, index }) {
   ) : null;
 
   return (
-    <div ref={ref}>
-      <div
-        onClick={(event) => { event.stopPropagation(); setIsToggled(!isToggled); }}
-      >
-        <GearIcon />
+    <div>
+      <div ref={ref}>
+        <div
+          onClick={(event) => { event.stopPropagation(); setIsToggled(!isToggled); }}
+        >
+          <GearIcon />
+        </div>
+        <div>
+          {dropdown}
+        </div>
       </div>
-      <div>
-        {dropdown}
+      <div ref={ref1}>
+        {editForm}
       </div>
-      {editForm}
     </div>
   );
 }
