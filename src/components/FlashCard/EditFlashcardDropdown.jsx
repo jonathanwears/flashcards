@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/prop-types */
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import { deleteEntry } from '../../utils/server';
@@ -8,7 +7,8 @@ import DropDownButton from './DropdownButton';
 function EditFlashcardDropdown({ setToggleOpen, toggleOpen, edit, setEdit }) {
   const history = useHistory();
 
-  const handleEditClick = useCallback(() => {
+  const handleEditClick = useCallback((event) => {
+    event.stopPropagation();
     setEdit(true);
     setToggleOpen(!toggleOpen);
   });
