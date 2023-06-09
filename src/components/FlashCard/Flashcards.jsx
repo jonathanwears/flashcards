@@ -6,7 +6,7 @@ function FlashCards({ words }) {
     <Card key={`${word}${index}`} index={index} word={word} />));
 
   return (
-    <div className="flex">
+    <div className="flex flex-wrap ">
       {flashCards}
     </div>
   );
