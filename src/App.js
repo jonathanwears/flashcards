@@ -10,7 +10,7 @@ import Game from './pages/Game';
 function App() {
   return (
     <>
-      <div className="bg-slate-800 w-screen h-screen">
+      <div className="bg-gray-800 w-screen h-screen">
         <Router>
           <NavBar />
           <Switch>
