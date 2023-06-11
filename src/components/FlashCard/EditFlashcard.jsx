@@ -17,7 +17,7 @@ function EditFlashcard({ word, index }) {
     />
   ) : null;
 
-  const editForm = a ? (
+  const editForm = toggle ? (
     <EditFlashcardForm
       word={word}
       index={index}
