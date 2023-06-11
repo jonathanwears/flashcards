@@ -27,12 +27,15 @@ function Card({ word, index }) {
           word={shownWord}
         />
       </div>
-      <div className=" pt-28 absolute bottom-6 right-1/2">
-        <EditFlashcard
-          word={word}
-          index={index}
-        />
-      </div>
+      {index && (
+        <div className=" pt-28 absolute bottom-6 right-1/2">
+          <EditFlashcard
+            word={word}
+            index={index}
+          />
+
+        </div>
+      )}
     </div>
   );
 }
