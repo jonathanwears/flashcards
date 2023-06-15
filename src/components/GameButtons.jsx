@@ -3,7 +3,7 @@ import GameButton from './GameButton';
 
 function GameButtons({ onClick }) {
   return (
-    <div className="bg-slate-700">
+    <div className="bg-slate-700 rounded-lg m-2 flex flex-row justify-center">
       <GameButton
         name="correct"
         onClick={onClick}

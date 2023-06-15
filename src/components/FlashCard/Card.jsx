@@ -18,7 +18,7 @@ function Card({ word, index }) {
   }
 
   return (
-    <div className="relative">
+    <div className="relative flex justify-center">
       <div
         className={className}
         onClick={handleOnClick}
