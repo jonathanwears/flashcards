@@ -4,8 +4,8 @@ export default [
     englishWord: 'Morning',
   },
   {
-    germanWord: 'Today',
-    englishWord: 'Heute',
+    germanWord: 'Heute',
+    englishWord: 'Today',
   },
   {
     germanWord: 'Auto',
