@@ -27,24 +27,24 @@ function Game() {
 
   return (
     <div className="grid grid-cols-9 auto-rows-fr">
-      <div className="col-span-3 row-span-3 row-start-2 col-start-2">
+      <div className="md:col-span-3 md:row-span-3 md:row-start-2 md:col-start-2 lg:col-start-2 lg:col-span-2">
         <Card
           word={mockData[count]}
         />
       </div>
-      <div className="flex col-start-5 row-start-3 col-span-2 justify-center items-center">
+      <div className="flex col-start-5 row-start-3 col-span-2 justify-center items-center lg:col-start-4">
         <Button
           onClick={handleOnClick}
         >
           Next Card
         </Button>
       </div>
-      <div className="row-span-3 col-span-2 row-start-2">
+      <div className="md:row-span-2 md:col-span-2 md:row-start-2 lg:col-span-2 lg:row-span-2 lg:col-start-7 lg:row-start-2">
         <Score
           score={score}
         />
       </div>
-      <div className="row-start-6 col-start-2 col-span-3">
+      <div className="md:row-start-6 md:col-start-2 md:col-span-3 lg:col-span-2 lg:col-start-2 lg:justify-center lg:mx-8">
         <GameButtons
           onClick={handleAnswer}
         />
