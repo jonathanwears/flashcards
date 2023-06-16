@@ -1,10 +1,19 @@
 import React from 'react';
+import ScoreValue from './ScoreValue';
 
 function Score({ score }) {
   return (
-    <div className="text-white text-2xl bg-slate-700 h-full rounded-xl">
-      <h2>Correct {score.correct}</h2>
-      <h2>Wrong {score.wrong}</h2>
+    <div className=" flex flex-col justify-center items-center bg-slate-700 h-full rounded-xl">
+      <div>
+        <ScoreValue
+          title="Correct"
+          value={score.correct}
+        />
+        <ScoreValue
+          title="Wrong"
+          value={score.wrong}
+        />
+      </div>
     </div>
   );
 }
