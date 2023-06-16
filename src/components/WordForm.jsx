@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 
 import FormInput from './FormInput';
-import Button from '../Button';
+import Button from './Button';
 
 const defaultValues = {
   englishWord: '',

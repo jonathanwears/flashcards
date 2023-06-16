@@ -1,8 +1,8 @@
 import React from 'react';
-import GearIcon from '../../icons/GearIcon';
+import GearIcon from '../icons/GearIcon';
 import EditFlashcardDropdown from './EditFlashcardDropdown';
 import EditFlashcardForm from './EditFlashcardForm';
-import { useDropdown } from '../hooks/useDropdown';
+import { useDropdown } from '../utils/hooks/useDropdown';
 
 function EditFlashcard({ word, index }) {
   const [ref, isToggled, setIsToggled] = useDropdown();

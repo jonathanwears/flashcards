@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import mockData from '../../mockData';
-import Card from '../components/FlashCard/Card';
+import Card from '../components/Card';
 import Button from '../components/Button';
 import Score from '../components/Score';
 import GameButtons from '../components/GameButtons';
