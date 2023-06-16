@@ -21,7 +21,9 @@ function Database() {
 
   return (
     <div className="flex flex-col">
-      <AddNewWord />
+      <div className="flex justify-center">
+        <AddNewWord />
+      </div>
       <div className="flex justify-center">
         {renderWords}
       </div>
