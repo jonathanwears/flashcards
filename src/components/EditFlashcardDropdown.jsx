@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
-import { deleteEntry } from '../../utils/server';
+import { deleteEntry } from '../utils/server';
 import DropDownButton from './DropdownButton';
 
 function EditFlashcardDropdown({ setToggleOpen, toggleOpen, edit, setEdit }) {

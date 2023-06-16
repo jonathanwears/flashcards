@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import useDataStore from '../../utils/useDataStore';
-import { updateWord } from '../../utils/server/index';
+import useDataStore from '../utils/useDataStore';
+import { updateWord } from '../utils/server/index';
 import WordForm from './WordForm';
 
 function EditFlashcardForm({ word, postMethod, index }) {

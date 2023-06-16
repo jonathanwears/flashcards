@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
-import { useDropdown } from '../hooks/useDropdown';
-import useDataStore from '../../utils/useDataStore';
-import Button from '../Button';
+import { useDropdown } from '../utils/hooks/useDropdown';
+import useDataStore from '../utils/useDataStore';
+import Button from './Button';
 import WordForm from './WordForm';
 
 function AddNewWord() {
