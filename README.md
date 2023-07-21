@@ -66,7 +66,7 @@ Project is: _in progress_
 
 #### To Do:
 
-- Create a game functionality
+- Create a game functionality - Done
 - Continue styling
 - Add animations
 
