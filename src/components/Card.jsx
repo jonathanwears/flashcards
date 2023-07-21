@@ -18,10 +18,13 @@ function Card({ word, index }) {
   }
 
   return (
-    <div className="relative flex justify-center">
+    <button
+      className="relative flex justify-center"
+      type="button"
+      onClick={handleOnClick}
+    >
       <div
         className={className}
-        onClick={handleOnClick}
       >
         <FlashCardWord
           word={shownWord}
@@ -36,7 +39,7 @@ function Card({ word, index }) {
 
         </div>
       ) : null}
-    </div>
+    </button>
   );
 }
 
